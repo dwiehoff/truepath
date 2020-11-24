@@ -4,5 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :professions, :user_kasis, dependent: :destroy
+  has_many :professions, dependent: :destroy
+  has_many :user_kasis
+  has_many :kasis, through: :user_kasis
 end
