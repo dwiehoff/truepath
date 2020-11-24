@@ -1,0 +1,2 @@
+class Kasi < ApplicationRecord
+end

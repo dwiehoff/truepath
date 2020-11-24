@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_23_205902) do
+ActiveRecord::Schema.define(version: 2020_11_24_095606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,82 @@ ActiveRecord::Schema.define(version: 2020_11_23_205902) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "answers", force: :cascade do |t|
+    t.text "text"
+    t.bigint "kasi_id", null: false
+    t.bigint "question_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["kasi_id"], name: "index_answers_on_kasi_id"
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.bigint "kasi_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["kasi_id"], name: "index_categories_on_kasi_id"
+  end
+
+  create_table "kasis", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "professions", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "roadmaps", force: :cascade do |t|
+    t.boolean "completion"
+    t.bigint "profession_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["profession_id"], name: "index_roadmaps_on_profession_id"
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.string "name"
+    t.float "duration_in_days"
+    t.string "icon"
+    t.integer "order"
+    t.text "description"
+    t.string "resource_url"
+    t.bigint "roadmap_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["roadmap_id"], name: "index_steps_on_roadmap_id"
+  end
+
+  create_table "user_answers", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "answer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["answer_id"], name: "index_user_answers_on_answer_id"
+    t.index ["user_id"], name: "index_user_answers_on_user_id"
+  end
+
+  create_table "user_kasis", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "kasi_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["kasi_id"], name: "index_user_kasis_on_kasi_id"
+    t.index ["user_id"], name: "index_user_kasis_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,9 +120,21 @@ ActiveRecord::Schema.define(version: 2020_11_23_205902) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.bigint "profession_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["profession_id"], name: "index_users_on_profession_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "answers", "kasis"
+  add_foreign_key "answers", "questions"
+  add_foreign_key "categories", "kasis"
+  add_foreign_key "steps", "roadmaps"
+  add_foreign_key "user_answers", "answers"
+  add_foreign_key "user_answers", "users"
+  add_foreign_key "user_kasis", "kasis"
+  add_foreign_key "user_kasis", "users"
+  add_foreign_key "users", "professions"
 end
