@@ -1,5 +1,5 @@
 class Profession < ApplicationRecord
-  has_many :roadmaps
-
+  has_many :steps
+  
   validates :name, presence: true
 end
