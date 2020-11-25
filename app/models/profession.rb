@@ -1,5 +1,7 @@
 class Profession < ApplicationRecord
-  has_many :steps, :users
+  has_many :steps
+  has_many :users
+  has_one_attached :image
 
-  validates :name, presence: true
+  validates :track, presence: true
 end

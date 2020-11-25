@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_141950) do
+ActiveRecord::Schema.define(version: 2020_11_25_172125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,25 +46,19 @@ ActiveRecord::Schema.define(version: 2020_11_25_141950) do
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.bigint "kasi_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["kasi_id"], name: "index_categories_on_kasi_id"
-  end
-
   create_table "kasis", force: :cascade do |t|
     t.string "name"
     t.string "icon"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "category"
   end
 
   create_table "professions", force: :cascade do |t|
     t.string "track"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "short_description"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -82,7 +76,9 @@ ActiveRecord::Schema.define(version: 2020_11_25_141950) do
     t.string "resource_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "completion"
+    t.integer "dependency"
+    t.bigint "profession_id"
+    t.index ["profession_id"], name: "index_steps_on_profession_id"
   end
 
   create_table "user_answers", force: :cascade do |t|
@@ -130,7 +126,6 @@ ActiveRecord::Schema.define(version: 2020_11_25_141950) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "answers", "kasis"
   add_foreign_key "answers", "questions"
-  add_foreign_key "categories", "kasis"
   add_foreign_key "user_answers", "answers"
   add_foreign_key "user_answers", "users"
   add_foreign_key "user_completed_steps", "steps"
