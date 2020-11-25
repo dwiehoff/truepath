@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  namespace :assessments do
-    namespace :skills do
-      resources :questions, only: [ :show ]
-    end
-    resources :kasis, only: [ :index, :show ]
+  get 'onboarding', to: 'questions#index'
+  get 'answers/:id', to: 'answers#answer'
+  resources :professions, only: [:index, :show] do
+    get 'select', to: 'professions#select'
+    get 'jobs', to: 'professions#jobs'
   end
-  resources :professions, only: [ :index, :show ]
-  resources :roadmaps, only: [ :show ]
+  get 'steps/:id/complete', to: 'steps#complete'
 end

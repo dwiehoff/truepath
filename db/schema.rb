@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_24_103710) do
+ActiveRecord::Schema.define(version: 2020_11_25_135427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,13 +73,6 @@ ActiveRecord::Schema.define(version: 2020_11_24_103710) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "roadmaps", force: :cascade do |t|
-    t.bigint "profession_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["profession_id"], name: "index_roadmaps_on_profession_id"
-  end
-
   create_table "steps", force: :cascade do |t|
     t.string "name"
     t.float "duration_in_days"
@@ -87,11 +80,9 @@ ActiveRecord::Schema.define(version: 2020_11_24_103710) do
     t.integer "order"
     t.text "description"
     t.string "resource_url"
-    t.bigint "roadmap_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "completion"
-    t.index ["roadmap_id"], name: "index_steps_on_roadmap_id"
   end
 
   create_table "user_answers", force: :cascade do |t|
@@ -101,6 +92,15 @@ ActiveRecord::Schema.define(version: 2020_11_24_103710) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["answer_id"], name: "index_user_answers_on_answer_id"
     t.index ["user_id"], name: "index_user_answers_on_user_id"
+  end
+
+  create_table "user_completed_steps", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "step_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["step_id"], name: "index_user_completed_steps_on_step_id"
+    t.index ["user_id"], name: "index_user_completed_steps_on_user_id"
   end
 
   create_table "user_kasis", force: :cascade do |t|
@@ -131,9 +131,10 @@ ActiveRecord::Schema.define(version: 2020_11_24_103710) do
   add_foreign_key "answers", "kasis"
   add_foreign_key "answers", "questions"
   add_foreign_key "categories", "kasis"
-  add_foreign_key "steps", "roadmaps"
   add_foreign_key "user_answers", "answers"
   add_foreign_key "user_answers", "users"
+  add_foreign_key "user_completed_steps", "steps"
+  add_foreign_key "user_completed_steps", "users"
   add_foreign_key "user_kasis", "kasis"
   add_foreign_key "user_kasis", "users"
   add_foreign_key "users", "professions"
