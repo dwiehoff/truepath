@@ -27,8 +27,10 @@
 
           <div class=" d-flex justify-content-center ">
 <% question.answers.each_with_index do |answer, index| %>
-        <%= link_to answer.text, "#question-carousel", class:"btn btn-outline-secondary", 'data-slide': "next" %>
+        <%= link_to answer.text, "#question-carousel", class:"btn btn-outline-secondary", 'data-slide': "next",data:{answer:"test"}%>
     <% end %>
+<!-- {answer:'test'}, html_options={class:"btn btn-outline-secondary",data:{slide:"next"}}
+ -->
     </div>
           </div>
         </div>
