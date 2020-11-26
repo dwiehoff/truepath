@@ -1,0 +1,72 @@
+div.navbar {
+  display: none;
+}
+
+body {
+  padding-bottom: 50px;
+}
+
+h1 {
+  font-weight: bolder;
+  color: #1E1248;
+  margin-top: 20vh;
+}
+
+p {
+  font-family: "Playfair Display", sans-serif;
+  color: #C3C4C7;
+  font-size: 21px;
+  font-style: italic;
+}
+
+#career-suggestions {
+  margin: 0 auto;
+  width: 80%;
+  height: 55vh;
+  // overflow: hidden;
+  position: relative;
+
+  .suggestion {
+    background-color: white;
+    height: 90%;
+    margin: 20px 0;
+    border-radius: 15px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+
+    &:nth-of-type(1) {
+      // position: absolute;
+      // z-index: 100;
+    }
+
+    .content {
+      color: white;
+      position: absolute;
+      bottom: 10px;
+      margin: 0 20px;
+
+      p {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        color: white;
+        letter-spacing: 0.7px;
+      }
+    }
+
+    .tags {
+      display: flex;
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        padding: 0 10px;
+        border: 1px solid white;
+        border-radius: 15px;
+        margin: 0 5px;
+      }
+    }
+  }
+}

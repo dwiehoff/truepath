@@ -1,2 +1,17 @@
-<h1>Professions#index</h1>
-<p>Find me in app/views/professions/index.html.erb</p>
+<h1>How does this sound?</h1>
+<p>Swipe left to like the career, right to dismiss.</p>
+
+<section id="career-suggestions">
+  <% @professions.each do |c| %>
+  <div class="suggestion" style="background-image: linear-gradient(90deg, rgba(89,86,128,.5) 0%, rgba(89,86,128,.5) 100%), url('https://images.unsplash.com/photo-1554774853-719586f82d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');">
+    <div class="content">
+      <h2><%= c.track %></h2>
+      <p><%= c.short_description %></p>
+      <ul class="tags">
+        <li class="tag"><i class="far fa-laugh-beam"></i> 4.6</li>
+        <li class="tag">Communication</li>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+</section>
