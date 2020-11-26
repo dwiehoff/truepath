@@ -25,28 +25,32 @@
            <div class="card-body">
             <h5 class="card-title">Question <%= index + 1 %></h5>
             <p class="card-text"><%=question.text%></p>
-            <a href="#" class="btn btn-outline-secondary">Go somewhere</a>
-            <a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+
+
+<% question.answers.each_with_index do |answer, index| %>
+      <% if index == 0 %>
+        <a href="#" class="btn btn-outline-secondary"><%=answer.text%></a>
+      <% else  %>
+        <a href="#" class="btn btn-outline-secondary"><%=answer.text%></a>
+      <% end %>
+    <% end %>
+
           </div>
         </div>
       </div>
 
 
-<% @question.answers.each_with_index do |answer, index| %>
-        <a class="carousel-control-prev" href="#answer-carousel" role="button" data-slide="prev">
+
+
+
+      <a class="carousel-control-prev" href="#question-carousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <% else  %>
-        <a class="carousel-control-next" href="#answer-carousel" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#question-carousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-      <% end %>
-    <% end %>
-
-
-
     <% end %>
   </div>
 </div>
