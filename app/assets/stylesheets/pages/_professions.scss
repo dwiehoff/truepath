@@ -111,7 +111,8 @@ body {
   .selection {
     list-style: none;
     padding-left: 0;
-    display: inline;
+    display: flex;
+    align-items: center;
 
     .selected_career {
       list-style: none;
