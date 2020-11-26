@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get 'welcome', to: 'pages#welcome'
   get 'onboarding', to: 'questions#index'
   get 'answers/:id', to: 'answers#answer'
   resources :professions, only: [:index, :show] do
