@@ -1,5 +1,5 @@
-<%# <h1>Pages#Welcome_page</h1>
-<p>Find me in app/views/pages/welcome.html.erb</p> %>
+<h1>Pages#Gap_analysis</h1>
+<p>Find me in app/views/professions/show.html.erb</p>
 
 <!doctype html>
 <html lang="en">
@@ -11,17 +11,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Welcome</title>
+    <title>Gap Analysis</title>
   </head>
   <body>
   <div class="container">
     <div class="row justify-content-center">
       <%# <div class="float-sm-left"> %>
         <div class="col-12 col-lg-6"> 
-          <%= image_tag "AI_pic.jpg", class: "rounded mx-auto d-block", alt: "Sandro AI" %> 
-          <h2>Hello, I'm Sandro </h2>
-            <p>Did you know that we spend a <i>third</i> of our life - or <strong>90.000 hours</strong> - on the job? In short, it makes a lot of sense to find the <i>right</i> one. We will help you to find your <b><i>Truepath</i></b></p>
-          <a href="onboarding" type="button" class="btn btn-primary">Go to the assessment!</a>
+         <%# <%= image_tag "#", class: "rounded mx-auto d-block", alt: "Gap Analysis" %>
+          <h2>Your Gap Analysis for <%=@profession.track%></h2>
+            <p>Those are the skills you need to aquire to get on your <i><b>Truepath</b></i> as a <%= @profession.track %></p>
+          <a href="#" type="button" class="btn btn-primary">Go to the roadmap</a>
           </div>
         </div>
       </div>  
@@ -36,4 +36,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
-
