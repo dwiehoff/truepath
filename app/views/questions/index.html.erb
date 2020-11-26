@@ -23,7 +23,7 @@
         <div class="card" alt="First slide">
            <div class="card-body">
             <h5 class="card-title text-center">Question <%= index + 1 %></h5>
-            <p class="card-text text-center"><%=question.text%></p>
+            <p class="card-text text-center"><%=question.text.html_safe%></p>
 
           <div class=" d-flex justify-content-center ">
 <% question.answers.each_with_index do |answer, index| %>
