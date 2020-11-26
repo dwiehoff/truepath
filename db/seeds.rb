@@ -122,17 +122,17 @@ puts "» #{Kasi.count} KASIs created ✅"
 # UserKasi.create!(user: , kasi: )
 
 # Create questions
-q1 = Question.create!(text: "Pref1")
-q2 = Question.create!(text: "Pref2")
-q3 = Question.create!(text: "Pref3")
-q4 = Question.create!(text: "Pref4")
-q5 = Question.create!(text: "Pref5")
-q6 = Question.create!(text: "Pref6")
-q7 = Question.create!(text: "Pref7")
-q8 = Question.create!(text: "Pref8")
-q9 = Question.create!(text: "Pref9")
-q10 = Question.create!(text: "Pref10")
-q11 = Question.create!(text: "Pref11")
+q1 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q2 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q3 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q4 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q5 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q6 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q7 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q8 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q9 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q10 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q11 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
 
 puts "» #{Question.count} questions created ✅"
 
