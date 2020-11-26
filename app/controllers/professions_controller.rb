@@ -4,9 +4,7 @@ class ProfessionsController < ApplicationController
   end
 
 private
-def set_profession
-  @profession = Profession.find(params[:id])
+  def set_profession
+    @profession = Profession.find(params[:id])
+  end
 end
-end 
-
-
