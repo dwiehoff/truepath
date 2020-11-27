@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'answers/:id', to: 'answers#answer'
   resources :professions, only: [:index, :show] do
     get 'select', to: 'professions#select'
-    get 'jobs', to: 'professions#jobs'
   end
+  get 'professions/:title/jobs', to: 'professions#jobs'
   get 'steps/:id/complete', to: 'steps#complete'
 end
