@@ -1,0 +1,36 @@
+<div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false">
+  <ol class="carousel-indicators">
+    <!-- iterate over questions (li) -->
+    <% @jobs.each_with_index do |job, index| %>
+      <% if index == 0 %>
+        <li data-target="#jobs-carousel" data-slide-to="0" class="active"></li>
+      <% else  %>
+        <li data-target="#jobs-carousel" data-slide-to="<%= index %>"></li>
+      <% end %>
+    <% end %>
+  </ol>
+  <div class="carousel-inner">
+    <% @jobs.each_with_index do |job, index| %>
+      <% class_name = index == 0 ? 'carousel-item active' : 'carousel-item'  %>
+        <div class="<%= class_name %>">
+          <div class="card" alt="First slide">
+              <div class="card-body">
+                <h5 class="card-title"><%= job[:title] %></h5>
+                <h6 class="card-title"><%= job[:company] %></h6>
+                <h6 class="card-title"><%= job[:location] %></h6>
+                <p class="card-text"><%= job[:description] %></p>
+                <a href="#" class="btn btn-outline-secondary">Apply</a>
+              </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+  <a class="carousel-control-prev" href="#jobs-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#jobs-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
