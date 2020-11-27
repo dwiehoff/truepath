@@ -4,7 +4,7 @@
 
   <section id="career-suggestions">
     <% @professions.each.with_index do |c, i| %>
-    <div class="suggestion <%= "suggestion-#{i+1}" %>" draggable="true" style="background-image: linear-gradient(90deg, rgba(89,86,128,.5) 0%, rgba(89,86,128,.5) 100%), url(<%= 'https://images.unsplash.com/photo-1554774853-719586f82d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' %>);">
+    <div class="suggestion <%= "suggestion-#{i+1}" %> <%= "profession-#{c.id}" %>" draggable="true" style="background-image: linear-gradient(90deg, rgba(89,86,128,.5) 0%, rgba(89,86,128,.5) 100%), url(<%= 'https://images.unsplash.com/photo-1554774853-719586f82d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' %>);">
       <div class="content">
         <h2><%= c.track %></h2>
         <p><%= c.short_description %></p>
