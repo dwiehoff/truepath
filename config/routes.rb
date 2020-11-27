@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'welcome', to: 'pages#welcome'
   get 'onboarding', to: 'questions#index'
   get 'answers/:id', to: 'answers#answer'
+  get 'professions/compare', to: 'professions#compare'
   resources :professions, only: [:index, :show] do
     get 'select', to: 'professions#select'
   end

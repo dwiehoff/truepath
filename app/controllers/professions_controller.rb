@@ -1,9 +1,9 @@
 class ProfessionsController < ApplicationController
-  
+
   def index
     @professions = Profession.all # TODO: matching algorithm to only show matching professions
   end
-  
+
   def jobs
     @title = params[:title]
     @jobs = [
@@ -36,8 +36,12 @@ class ProfessionsController < ApplicationController
   end
 
   private
-  
+
   def set_profession
     @profession = Profession.find(params[:id])
+  end
+
+  def compare
+
   end
 end
