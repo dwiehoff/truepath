@@ -1,31 +1,33 @@
-.h-v-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.carousel-indicators {
-  position: relative;
-  top: 340px;
-}
-.carousel-inner {
-  a.btn {
-    margin: 20px 10px;
-    width: 35%;
-    height: 100px;
+body.questions.index {
+  .h-v-center {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px 10px;
+    height: 100vh;
   }
-  p.card-text {
-    color: #1E1248;
-    font-weight: normal;
-    font-style: normal !important;
-    font-family: "Open Sans", sans-serif;
+
+  .carousel-indicators {
+    position: relative;
+    top: 340px;
   }
-  .card {
-    height: 300px;
+  .carousel-inner {
+    a.btn {
+      margin: 20px 10px;
+      width: 35%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px 10px;
+    }
+    p.card-text {
+      color: #1E1248;
+      font-weight: normal;
+      font-style: normal !important;
+      font-family: "Open Sans", sans-serif;
+    }
+    .card {
+      height: 300px;
+    }
   }
 }
