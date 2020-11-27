@@ -1,6 +1,7 @@
 <div class="h-v-center">
   <div id="question-carousel" class="carousel slide" data-wrap="false" data-interval="false">
     <!-- iterate over questions (li) -->
+    <% value = 0 %>
     <ol class="carousel-indicators">
       <% @questions.each_with_index do |question, index| %>
       <% if index == 0 %>
@@ -22,11 +23,18 @@
               <h5 class="card-title text-center">Question <%= index + 1 %></h5>
               <p class="card-text text-center"><%=question.text.html_safe%></p>
               <div class=" d-flex justify-content-center ">
+
                 <% question.answers.each_with_index do |answer, index| %>
-                <%= link_to answer.text, "#question-carousel", class:"btn btn-outline-secondary", 'data-slide': "next",data:{answer:"test"}%>
+                <% value += 1 %>
+                <% if value > 20 %>
+                     <%= link_to answer.text, professions_index_path, class:"btn btn-outline-secondary"%>
+                  <% else %>
+                     <%= link_to answer.text, "#question-carousel", class:"btn btn-outline-secondary", 'data-slide': "next"%>
+                  <% end %>
                 <% end %>
                 <!-- {answer:'test'}, html_options={class:"btn btn-outline-secondary",data:{slide:"next"}}
                 -->
+
               </div>
             </div>
           </div>
