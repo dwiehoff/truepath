@@ -1,6 +1,8 @@
 
 .footer-wide {
-  width: 100%;
+  width: calc(30px + 100%);
+  position: relative;
+  left: -30px;
   text-align: center;
   padding: 8px;
   margin: 8px;
