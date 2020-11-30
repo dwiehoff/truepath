@@ -42,6 +42,6 @@ class ProfessionsController < ApplicationController
   end
 
   def compare
-
+    
   end
 end
