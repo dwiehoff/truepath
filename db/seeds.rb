@@ -122,17 +122,17 @@ puts "» #{Kasi.count} KASIs created ✅"
 # UserKasi.create!(user: , kasi: )
 
 # Create questions
-q1 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q2 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q3 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q4 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q5 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q6 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q7 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q8 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q9 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q10 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
-q11 = Question.create!(text: "To understand where your interests lie, please indicate your <strong>preferences:</strong>")
+q1 = Question.create!(text: "What sounds more appealing to you?")
+q2 = Question.create!(text: "What sounds more appealing to you?")
+q3 = Question.create!(text: "Do you prefer to work in a creative or more in an analytical way?")
+q4 = Question.create!(text: "Do you prefer specialisation or in a certain area or to be more of a generalist?")
+q5 = Question.create!(text: "Would you call yourself an Entrepreneurial or more of an Investigative thinker?")
+q6 = Question.create!(text: "What sounds more appealing to you?")
+q7 = Question.create!(text: "Are you thinking/planing things trough or dealing with problems when they come up?")
+q8 = Question.create!(text: "Do you like working one main task/ product after another or do you want to experience?")
+q9 = Question.create!(text: "Please indicate your <strong>preference:</strong>?")
+q10 = Question.create!(text: "What sounds more interesting to you?")
+q11 = Question.create!(text: "Do you want to show up or show off regarding your future Job?")
 
 puts "» #{Question.count} questions created ✅"
 
