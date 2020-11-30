@@ -1,6 +1,10 @@
 
 .footer-wide {
+  width: 100%;
+  text-align: center;
   color: transparent;
+  background-color: grey;
+  color: white;
   font-family: "Open Sans",sans-serif;
   font-size: 15px;
   line-height: 26px;
@@ -10,7 +14,28 @@
   position: relative;
   min-height: 1px;
   cursor: pointer;
-  padding: 24px 20px;
+  padding: 8px;
+  margin: 8px;
   display: inline-block;
   min-width: 300px;
+}
+
+i.fab.fa-github {
+  color: white
+}
+
+i.fab.fa-instagram {
+  color: white
+}
+
+i.fab.fa-facebook {
+  color: white
+}
+
+i.fab.fa-twitter {
+  color: white
+}
+
+i.fab.fa-linkedin {
+  color: white
 }
