@@ -37,7 +37,7 @@ strong {
   color: $heading-highlight;
 }
 
-.sub p {
+.sub p, p.sub {
   font-family: $sub;
   font-style: italic;
   color: $subheading;
