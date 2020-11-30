@@ -1,10 +1,12 @@
 // Define variables for your color scheme
 
-// For example:
-$red: #FD1015;
-$blue: #167FFB;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #F4F4F4;
+$eggplant: #1E1248; // background and heading
+$eggplant-inner: #2B1A6A; // offset to dark bg
+$eggplant-inner-text: #8773D1;
+$light-eggplant1: #746C90; // secondary/unselected items on light bg .. rgba(30,18,72,.65)
+$light-eggplant2: #6F35BB; // ... on dark background
+$heading-highlight: #FF4877; // highlight .. #FF3C95
+$subheading: #C3C4C7;
+$white: #fff; // on dark background
+$green: #7ED321; // rare use to signal positivity
+$light-gray: #979797; // components
