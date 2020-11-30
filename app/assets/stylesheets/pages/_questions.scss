@@ -1,3 +1,16 @@
+.answers {
+  position: relative;
+  overflow: hidden;
+}
+.answer-text {
+  z-index: 1;
+}
 .icon {
-  transform: translate(-35px, 30px);
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  // transform: translate(-95px, 30px);
+  font-size: 5em;
+  color: rgba(0,0,0,.05);
+  z-index: 0;
 }
