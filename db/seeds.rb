@@ -130,7 +130,7 @@ q5 = Question.create!(text: "Would you call yourself an Entrepreneurial or more 
 q6 = Question.create!(text: "What sounds more appealing to you?")
 q7 = Question.create!(text: "Are you thinking/planing things trough or dealing with problems when they come up?")
 q8 = Question.create!(text: "Do you like working one main task/ product after another or do you want to experience?")
-q9 = Question.create!(text: "Please indicate your <strong>preference:</strong>?")
+q9 = Question.create!(text: "Please indicate your <strong>preference</strong>?")
 q10 = Question.create!(text: "What sounds more interesting to you?")
 q11 = Question.create!(text: "Do you want to show up or show off regarding your future Job?")
 
