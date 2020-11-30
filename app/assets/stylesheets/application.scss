@@ -15,4 +15,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap');
 @import "jquery-ui";
 @import "pages/compare";
-@import "components/carousel"
+@import "pages/questions";
+@import "components/carousel";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+  color: $eggplant;
+  font-weight: bolder;
+
+  p {
+    font-family: $sub;
+    color: $subheading;
+  }
+}
+
+p {
+  font-family: $body-font;
+}
