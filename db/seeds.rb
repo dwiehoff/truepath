@@ -138,7 +138,7 @@ puts "» #{Question.count} questions created ✅"
 
 # Create answers
 
-Answer.create!(text: "Sales and communication", question: q1, kasi: sales)
+Answer.create!(text: "Sales and communi&shy;cation", question: q1, kasi: sales)
 Answer.create!(text: "Maths and logic", question: q1, kasi: logic)
 Answer.create!(text: "Leadership", question: q2, kasi: authority)
 Answer.create!(text: "IT Affinity", question: q2, kasi: tech)
@@ -146,7 +146,7 @@ Answer.create!(text: "Creativity", question: q3, kasi: creativity)
 Answer.create!(text: "Convention and analysis", question: q3, kasi: at)
 Answer.create!(text: "Generalist", question: q4, kasi: gen)
 Answer.create!(text: "Specialist", question: q4, kasi: spec)
-Answer.create!(text: "Entrepreneurial", question: q5, kasi: entre)
+Answer.create!(text: "Entrepre&shy;neurial", question: q5, kasi: entre)
 Answer.create!(text: "Investigative", question: q5, kasi: investig)
 Answer.create!(text: "Hands-on creating", question: q6, kasi: handy)
 Answer.create!(text: "Conceptualizing and advising", question: q6, kasi: reasoning)
