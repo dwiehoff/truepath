@@ -30,9 +30,13 @@ require("jquery-ui");
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { test } from '../packs/professions'
+import { algorithm } from '../packs/questions'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  test();
+  if (document.querySelector('.professions.index'))
+    test();
+  if (document.querySelector('.questions.index'))
+    algorithm();
 });
