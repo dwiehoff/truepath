@@ -1,14 +1,37 @@
+body.pages.home .container {
+  margin: 0 auto !important;
+  padding: 0;
 
-.footer-wide {
-  width: 100%;
-  text-align: center;
-  padding: 8px;
-  margin: 8px;
-  background-color: grey;
-  color: white;
+  .inner-container {
+    width: 90%;
+    margin: 0 auto 50px auto;
+
+    h3 {
+      font-size: 1.4em;
+    }
+
+    .test-box {
+      display: flex;
+      justify-content: space-between;
+      background: white;
+      font-size: 14px;
+      color: #3d3d3d;
+      letter-spacing: 0.01em;
+      margin-top: 22px;
+
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .carousel-wrapper {
+    display: none;
+  }
 }
 
-.footer-links {
+.pages.home {
+  .carousel-item-text {
 
-  color: white
+  }
 }

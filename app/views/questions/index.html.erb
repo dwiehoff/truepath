@@ -26,11 +26,10 @@
                 <% question.answers.each_with_index do |answer, index| %>
                 <% value += 1 %>
                 <% if value > 20 %>
-                     <%= link_to answer.text, professions_index_path, class:"btn btn-outline-secondary"%>
+                     <%= link_to "<span class='answer-text'>#{answer.text}</span><i class='#{answer.kasi.icon} icon'></i>".html_safe, professions_index_path, class:"btn btn-outline-secondary answers"%>
                   <% else %>
-                     <%= link_to answer.text, "#question-carousel", class:"btn btn-outline-secondary", 'data-slide': "next"%>
+                     <%= link_to "<span class='answer-text'>#{answer.text}</span><i class='#{answer.kasi.icon} icon'></i>".html_safe, "#question-carousel", class:"btn btn-outline-secondary answers", 'data-slide': "next"%>
                   <% end %>
-                  <i class = "<%= answer.kasi.icon %> icon" ></i>
                 <% end %>
                 <!-- {answer:'test'}, html_options={class:"btn btn-outline-secondary",data:{slide:"next"}}
                 -->

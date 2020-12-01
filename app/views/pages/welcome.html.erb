@@ -1,13 +1,10 @@
 <%# <h1>Pages#Welcome_page</h1>
 <p>Find me in app/views/pages/welcome.html.erb</p> %>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <%= image_tag "AI_pic.jpg", class: "rounded mx-auto d-block", :style => "width: 75%" , alt: "Sandro AI" %>
-    <h2>Hello, I'm Sandro </h2>
-      <p>Did you know that we spend a <i>third</i> of our life - or <strong>90.000 hours</strong> - on the job? In short, it makes a lot of sense to find the <i>right</i> one. We will help you to find your <b><i>Truepath</i></b></p>
-    <a href="onboarding" type="button" class="btn btn-primary">Go to the assessment!</a>
-  </div>
+
+<div class="row justify-content-center" style="background-color: #000;">
+  <%= image_tag "AI_pic.jpg", class: "rounded mx-auto d-block", :style => "width: 75%" , alt: "Sandro AI" %>
 </div>
-
-
+<h2>Hello, I'm Sandro.</h2>
+  <p>Did you know that we spend a <i>third</i> of our life - or <strong>90.000 hours</strong> - on the job?<br>In short, it makes a lot of sense to find the <i>right</i> one. We will help you to find your true path.</p>
+<a href="onboarding" class="btn btn-primary btn-block btn-lg">Start assessment</a>

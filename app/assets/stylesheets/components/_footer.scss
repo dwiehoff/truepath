@@ -21,7 +21,25 @@
   width: 60px
 }
 
+.footer-wide {
+  background-color: $eggplant;
+  color: white;
+}
+
 .footer-links {
+  color: white;
   display: flex;
+  justify-content: center;
   align-items: center;
+  min-height: 100px;
+  font-size: 2em;
+
+  a {
+    color: white;
+    padding: 10px;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: $heading-highlight;
+  }
 }
