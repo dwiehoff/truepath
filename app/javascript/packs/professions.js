@@ -64,7 +64,7 @@ const test = () => {
     e.preventDefault();
     let suggestion = document.querySelector('.suggestion');
     // alert(suggestion.querySelector('h2').textContent);
-    if (document.querySelectorAll('.suggestion').length == 1)
+    if (document.querySelectorAll('.suggestion').length <= 1)
       compareBtn.classList.add('active');
     suggestion.remove();
 
