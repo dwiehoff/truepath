@@ -4,14 +4,20 @@
     display: flex;
     margin: auto;
     width: auto;
+    color: #C3C4C7;
+    flex-direction: row;
+    padding: auto;
 
   }
   .first {
-      border: 4px solid lightgrey;
+      border: 4px solid #C3C4C7;
 
   }
   .second {
-      border: 4px solid lightgrey;
+      border: 4px solid #C3C4C7;
+  }
+  #D,#K,#P,#S {
+    height: 145px;
   }
 
 }
