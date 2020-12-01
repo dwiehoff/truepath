@@ -5,7 +5,7 @@ const test = () => {
 
   const selectionList = document.querySelector('.selection');
 
-  selectionList.insertAdjacentHTML('beforeend', '<li class="compare selected_career" style="width: 70px; display: flex; align-items: center; justify-content: center;"><a href="/professions/compare?q=pm,sc"><i class="fas fa-balance-scale-right"></i></a></li>');
+  selectionList.insertAdjacentHTML('beforeend', '<li class="compare selected_career pulse-btn" style="width: 70px; align-items: center; justify-content: center;"><a href="/professions/compare?q=pm,sc"><i class="fas fa-balance-scale-right"></i></a></li>');
 
   document.querySelectorAll('.suggestion').forEach((el) => {
     el.addEventListener('mouseup', (e) => {
@@ -64,7 +64,8 @@ const test = () => {
     e.preventDefault();
     let suggestion = document.querySelector('.suggestion');
     // alert(suggestion.querySelector('h2').textContent);
-    compareBtn.classList.add('active');
+    if (document.querySelectorAll('.suggestion').length == 1)
+      compareBtn.classList.add('active');
     suggestion.remove();
 
         // let new_li = document.createElement('li');
