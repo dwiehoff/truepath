@@ -1,3 +1,6 @@
+body.pages.home .container {
+  margin: 0 auto !important;
+  padding: 0;
 
 .footer-wide {
   width: calc(30px + 100%);
@@ -9,10 +12,32 @@
   background-color: grey;
   color: white;
 }
+  .inner-container {
+    width: 90%;
+    margin: 0 auto 50px auto;
 
-.footer-links {
+    h3 {
+      font-size: 1.4em;
+    }
 
-  color: white
+    .test-box {
+      display: flex;
+      justify-content: space-between;
+      background: white;
+      font-size: 14px;
+      color: #3d3d3d;
+      letter-spacing: 0.01em;
+      margin-top: 22px;
+
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .carousel-wrapper {
+    display: none;
+  }
 }
 
 .pages.home {
