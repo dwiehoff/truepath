@@ -1,5 +1,5 @@
 
-  $roadmap-bg: #4D4545;
+  $roadmap-bg: rgba(0,0,0,0.01);
   $roadmap-color: #007bff;
   $roadmap-font-stack: 'Lato', sans-serif;
 
@@ -15,14 +15,15 @@
       background-color: $roadmap-bg;
       color: $roadmap-color;
       height: 100%;
+      background-size: cover;
   }
 
   .circle {
       font-weight: bold;
       padding: 15px 20px;
       border-radius: 50%;
-      background-color: $roadmap-color;
-      color: $roadmap-bg;
+      background-color: $eggplant;
+      color: $eggplant-inner-text;
       max-height: 50px;
       z-index: 2;
   }
@@ -61,7 +62,7 @@
 
 .roadmap .timeline {
   div {
-    padding: 0;
+    padding: 0 !important;
     height: 40px;
   }
 
