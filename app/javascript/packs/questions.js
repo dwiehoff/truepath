@@ -39,7 +39,7 @@ const run = (e) => {
       clearInterval(move);
       document.querySelector('#progress circle').style.fill = '#1E1248';
       document.querySelector('.process').insertAdjacentHTML('beforeend', '<div class="icon-checkmark"><i class="fas fa-check"></i></div>');
-      setInterval(() => { window.location = window.location.protocol + '//' + window.location.host + '/' + 'professions' }, 2000);
+      setInterval(() => { window.location = window.location.protocol + '//' + window.location.host + '/' + 'professions' }, 500);
     } else {
       document.querySelector("#progress").setAttribute("percent", i);
       i++;
