@@ -83,6 +83,8 @@ const test = () => {
   ignoreBtn.addEventListener('click', (e) => {
     e.preventDefault();
     let suggestion = document.querySelector('.suggestion');
+    if (document.querySelectorAll('.suggestion').length <= 1)
+      compareBtn.classList.add('active');
     suggestion.remove();
   });
 }
