@@ -1,7 +1,7 @@
 <h3>How does this sound?</h3>
 <div class="wrapper">
     <div class="first">
-      <a href="/professions/1" class="btn btn-info btn-lg btn-block">Product Mangager</a>
+      <a href="/professions/<%= Profession.where(track: 'Product Management').ids[0] %>" class="btn btn-info btn-lg btn-block">Product Mangager</a>
       <div id="D">
       <h5>Connection between product developement and marketing</h5>
       </div>
@@ -26,12 +26,12 @@
       <h4>Salary</h4>
       <p>$80.000-$120.000</p>
       </div>
-      <a href="/professions/1" class="btn btn-primary btn-lg btn-block">Continue</a>
+      <a href="/professions/<%= Profession.where(track: 'Product Management').ids[0] %>" class="btn btn-primary btn-lg btn-block">Continue</a>
     </div>
     <div class="second">
-      <a href="#" class="btn btn-info btn-lg btn-block">Softare Engineer</a>
+      <a href="#" class="btn btn-info btn-lg btn-block">Software Engineer</a>
       <div id="D">
-      <h5>Combining businesssense with programmer knowhow</h5>
+      <h5>Combining business sense with programming know-how</h5>
       </div>
       <div id="K">
       <h4>Knowledge</h4>

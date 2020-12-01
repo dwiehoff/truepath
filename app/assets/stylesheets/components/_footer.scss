@@ -9,7 +9,7 @@
   box-sizing: border-box;
   position: relative;
   min-height: 1px;
-  cursor: pointer;
+  // cursor: pointer;
   padding: 24px 20px;
   display: inline-block;
   min-width: 300px;
@@ -34,6 +34,8 @@
   min-height: 100px;
   font-size: 2em;
   width: 100%;
+  position: relative;
+  left: 15px;
 
   a {
     color: white;

@@ -1,6 +1,6 @@
 <div class="professions-index">
   <h1>How does this sound?</h1>
-  <p>Swipe left to like the career, right to dismiss.</p>
+  <p>Decide which career you'd like to compare by tapping the respective buttons below.</p>
 
   <section id="career-suggestions">
     <% @professions.each.with_index do |c, i| %>
@@ -18,5 +18,7 @@
   </section>
 
   <ul class="selection">
+    <li><a href="" class="keep selected_career" style="width: 70px; display: flex; align-items: center; justify-content: center;">Keep</a></li>
+    <li><a href="" class="ignore selected_career" style="width: 70px; display: flex; align-items: center; justify-content: center;">Ignore</a></li>
   </ul>
 </div>
