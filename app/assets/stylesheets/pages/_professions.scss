@@ -11,7 +11,7 @@ body.professions.index {
     h1 {
       font-weight: bolder;
       color: #1E1248;
-      margin-top: 20vh;
+      margin-top: 11vh;
     }
 
     p {
@@ -37,6 +37,8 @@ body.professions.index {
         // position: relative;
         background-size: cover;
         background-position: center;
+
+        transition: top 0.3s ease-in-out;
 
         h2 { color: white !important; }
 
@@ -109,7 +111,6 @@ body.professions.index {
       background-image: linear-gradient(90deg, rgba(89,86,128,.5) 0%, rgba(89,86,128,.5) 100%), url('https://images.unsplash.com/photo-1573165850883-9b0e18c44bd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80') !important;
     }
 
-
     .selection {
       list-style: none;
       padding-left: 0;
@@ -125,9 +126,24 @@ body.professions.index {
         height: 58px;
         transition: background-color 0.3s ease;
         margin-top: 20px;
+        display: none;
+        a {
+          transition: all 0.1s ease-in-out;
+        }
       }
+      .compare:hover a {
+        color: $heading-highlight;
+      }
+
       .compare.active {
         background-color: #6F35BB;
+        display: flex;
+      }
+      .compare.active:hover a {
+        color: $eggplant;
+      }
+      a.selected_career {
+        text-decoration: none;
       }
 
       .selected_career {
@@ -144,11 +160,30 @@ body.professions.index {
         min-height: 58px;
         cursor: pointer;
 
+        &.compare {
+          display: none;
+        }
+        &.compare.active {
+          background-color: #6F35BB;
+          display: flex;
+        }
+
         a {
           color: white;
           width: 100%;
+          text-decoration: none;
         }
       }
     }
   }
+}
+
+.pulse-btn {
+  animation: pulse 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  box-shadow: 0 0 0 0 rgba(111,53,187, 0.7);
+}
+@keyframes pulse {
+  0% { transform: scale(.9); }
+  30% { transform: scale(1); box-shadow: 0 0 0 0 rgba(111,53,187, 0.7); }
+  100% { transform: scale(.9); box-shadow: 0 0 0 25px rgba(111,53,187, 0); }
 }

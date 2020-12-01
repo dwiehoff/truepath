@@ -14,3 +14,52 @@
   color: rgba(0,0,0,.05);
   z-index: 0;
 }
+
+
+#question-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.process { width: 140px; }
+.icon-checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -99px;
+  font-size: 4em;
+  z-index: 100;
+  color: white;
+}
+svg {
+  transform: rotate(-90deg);
+  display: block;
+  width: 140px;
+  height: 140px;
+  circle {
+    fill: none;
+    stroke-width: 12px;
+    &:nth-child(1) {
+      stroke: rgba(white, .2);;
+    }
+    &:nth-child(2) {
+      stroke: $eggplant;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 402.124;
+      stroke-dashoffset: 402.124;
+      transition: all 150ms ease-out;
+    }
+  }
+  @for $i from 1 through 100 {
+    &[percent="#{$i}"] {
+      circle {
+        &:nth-child(2) {
+          stroke-dashoffset: #{402.124 - (402.124 * ($i/100))};
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ const test = () => {
 
   const selectionList = document.querySelector('.selection');
 
-  selectionList.insertAdjacentHTML('beforeend', '<li class="compare selected_career" style="width: 70px; display: flex; align-items: center; justify-content: center;"><a href="/professions/compare?q=pm,sc"><i class="fas fa-balance-scale-right"></i></a></li>');
+  selectionList.insertAdjacentHTML('beforeend', '<li class="compare selected_career pulse-btn" style="width: 70px; align-items: center; justify-content: center;"><a href="/professions/compare?q=pm,sc"><i class="fas fa-balance-scale-right"></i></a></li>');
 
   document.querySelectorAll('.suggestion').forEach((el) => {
     el.addEventListener('mouseup', (e) => {
@@ -24,7 +24,7 @@ const test = () => {
         el.remove();
         selectionList.appendChild(new_li);
 
-        document.querySelector('.compare').classList.add('active');
+        // document.querySelector('.compare').classList.add('active');
 
         if (!document.querySelector('.compare')) {
           // add button to link to comp
@@ -41,6 +41,49 @@ const test = () => {
         el.remove();
       }
     });
+  });
+
+  const keepBtn = document.querySelector('.keep');
+  const ignoreBtn = document.querySelector('.ignore');
+  const compareBtn = document.querySelector('.compare');
+
+  keepBtn.addEventListener('mouseover', e => {
+    e.target.textContent = '✅';
+  });
+  keepBtn.addEventListener('mouseout', e => {
+    e.target.textContent = 'Keep';
+  });
+  ignoreBtn.addEventListener('mouseover', e => {
+    e.target.textContent = '❌';
+  });
+  ignoreBtn.addEventListener('mouseout', e => {
+    e.target.textContent = 'Ignore';
+  });
+
+  keepBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let suggestion = document.querySelector('.suggestion');
+    // alert(suggestion.querySelector('h2').textContent);
+    if (document.querySelectorAll('.suggestion').length == 1)
+      compareBtn.classList.add('active');
+    suggestion.remove();
+
+        // let new_li = document.createElement('li');
+        // let a = document.createElement('a');
+        // a.setAttribute("href", '/professions/1');
+        // let linkText = document.createTextNode(document.querySelector('.suggestion h2').innerText);
+        // a.appendChild(linkText);
+        // new_li.appendChild(a);
+        // new_li.className = 'selected_career';
+        // // new_li.textContent = document.querySelector('.suggestion h2').innerText;
+        // el.remove();
+        // selectionList.appendChild(new_li);
+  });
+
+  ignoreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let suggestion = document.querySelector('.suggestion');
+    suggestion.remove();
   });
 }
 
