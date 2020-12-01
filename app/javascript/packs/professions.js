@@ -24,7 +24,7 @@ const test = () => {
         el.remove();
         selectionList.appendChild(new_li);
 
-        document.querySelector('.compare').classList.add('active');
+        // document.querySelector('.compare').classList.add('active');
 
         if (!document.querySelector('.compare')) {
           // add button to link to comp
@@ -41,6 +41,48 @@ const test = () => {
         el.remove();
       }
     });
+  });
+
+  const keepBtn = document.querySelector('.keep');
+  const ignoreBtn = document.querySelector('.ignore');
+  const compareBtn = document.querySelector('.compare');
+
+  keepBtn.addEventListener('mouseover', e => {
+    e.target.textContent = '✅';
+  });
+  keepBtn.addEventListener('mouseout', e => {
+    e.target.textContent = 'Keep';
+  });
+  ignoreBtn.addEventListener('mouseover', e => {
+    e.target.textContent = '❌';
+  });
+  ignoreBtn.addEventListener('mouseout', e => {
+    e.target.textContent = 'Ignore';
+  });
+
+  keepBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let suggestion = document.querySelector('.suggestion');
+    // alert(suggestion.querySelector('h2').textContent);
+    compareBtn.classList.add('active');
+    suggestion.remove();
+
+        // let new_li = document.createElement('li');
+        // let a = document.createElement('a');
+        // a.setAttribute("href", '/professions/1');
+        // let linkText = document.createTextNode(document.querySelector('.suggestion h2').innerText);
+        // a.appendChild(linkText);
+        // new_li.appendChild(a);
+        // new_li.className = 'selected_career';
+        // // new_li.textContent = document.querySelector('.suggestion h2').innerText;
+        // el.remove();
+        // selectionList.appendChild(new_li);
+  });
+
+  ignoreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let suggestion = document.querySelector('.suggestion');
+    suggestion.remove();
   });
 }
 
