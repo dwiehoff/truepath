@@ -33,6 +33,9 @@ class ProfessionsController < ApplicationController
 
   def show
     @profession = Profession.find(params[:id])
+    @steps = @profession.steps
+    @max_order = Step.where(profession: @profession).order(order: :desc).first.order + 1
+
   end
 
   private
@@ -42,6 +45,6 @@ class ProfessionsController < ApplicationController
   end
 
   def compare
-    
+
   end
 end
