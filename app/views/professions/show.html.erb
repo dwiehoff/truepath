@@ -23,10 +23,12 @@
             <div class="col-2 text-center bottom">
               <div class="circle"><%= order_number %></div>
             </div>
-            <div class="col-6">
+            <div class="col-9 offset-1">
               <% @steps.where(order: order_number - 1).each do |step| %>
-                <Input type="checkbox" name=<%= step.name %>> 
-                <h5><%= step.name %></h5>
+              <div class="d-flex align-items-center">
+                <Input type="checkbox" name=<%= step.name %>>
+                <h5 class="mx-2"><%= step.name %></h5>
+              </div>
               <% end %>
               <p>Lorem ipsum dolor .</p>
             </div>
@@ -49,8 +51,10 @@
             <div class="row align-items-center justify-content-end how-it-works">
               <div class="col-6 text-right">
                 <% @steps.where(order: order_number - 1).each do |step| %>
+                <div class="d-flex align-items-center">
                   <Input type="checkbox" name=<%= step.name %>> 
-                  <h5> <%= step.name %></h5>
+                   <h5 class="mx-2"><%= step.name %></h5>
+                </div>
                 <% end %>
                 <p>Lorem ipsum dolor sit amet,</p>
               </div>
