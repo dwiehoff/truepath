@@ -1,88 +1,90 @@
-h5.card-title {
-    background-color: $eggplant;
-    width: 54px;
-    margin: 0px auto 10px;
-    padding: 2px 4px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 600;
-    font-size: 0.8em;
-}
-
-p.card-text {
-  margin-top: 21px;
-}
-
-.answers {
-  position: relative;
-  overflow: hidden;
-}
-.answer-text {
-  z-index: 1;
-  hyphens: auto;
-}
-.icon {
-  position: absolute;
-  // left: 100px;
-  // top: 20px;
-  // transform: translate(-95px, 30px);
-  font-size: 5em;
-  color: rgba(0,0,0,.05);
-  z-index: 0;
-}
-
-.carousel-indicators{
-  max-width: 345px;
-}
-.carousel-indicators li {
-  background-color: #1E1248;
-}
-.carousel-indicators .active {
-  background-color: #1E1248;
-}
-
-#question-carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.process { width: 140px; }
-.icon-checkmark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: -99px;
-  font-size: 4em;
-  z-index: 100;
-  color: white;
-}
-svg {
-  transform: rotate(-90deg);
-  display: block;
-  width: 140px;
-  height: 140px;
-  circle {
-    fill: none;
-    stroke-width: 12px;
-    &:nth-child(1) {
-      stroke: rgba(white, .2);;
-    }
-    &:nth-child(2) {
-      stroke: $eggplant;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-dasharray: 402.124;
-      stroke-dashoffset: 402.124;
-      transition: all 150ms ease-out;
-    }
+body.questions.index {
+  h5.card-title {
+      background-color: $eggplant;
+      width: 54px;
+      margin: 0px auto 10px;
+      padding: 2px 4px;
+      border-radius: 5px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.8em;
   }
-  @for $i from 1 through 100 {
-    &[percent="#{$i}"] {
-      circle {
-        &:nth-child(2) {
-          stroke-dashoffset: #{402.124 - (402.124 * ($i/100))};
+
+  p.card-text {
+    margin-top: 21px;
+  }
+
+  .answers {
+    position: relative;
+    overflow: hidden;
+  }
+  .answer-text {
+    z-index: 1;
+    hyphens: auto;
+  }
+  .icon {
+    position: absolute;
+    // left: 100px;
+    // top: 20px;
+    // transform: translate(-95px, 30px);
+    font-size: 5em;
+    color: rgba(0,0,0,.05);
+    z-index: 0;
+  }
+
+  .carousel-indicators{
+    max-width: 345px;
+  }
+  .carousel-indicators li {
+    background-color: #1E1248;
+  }
+  .carousel-indicators .active {
+    background-color: #1E1248;
+  }
+
+  #question-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .process { width: 140px; }
+  .icon-checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -99px;
+    font-size: 4em;
+    z-index: 100;
+    color: white;
+  }
+  svg {
+    transform: rotate(-90deg);
+    display: block;
+    width: 140px;
+    height: 140px;
+    circle {
+      fill: none;
+      stroke-width: 12px;
+      &:nth-child(1) {
+        stroke: rgba(white, .2);;
+      }
+      &:nth-child(2) {
+        stroke: $eggplant;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 402.124;
+        stroke-dashoffset: 402.124;
+        transition: all 150ms ease-out;
+      }
+    }
+    @for $i from 1 through 100 {
+      &[percent="#{$i}"] {
+        circle {
+          &:nth-child(2) {
+            stroke-dashoffset: #{402.124 - (402.124 * ($i/100))};
+          }
         }
       }
     }
