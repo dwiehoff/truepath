@@ -1,5 +1,6 @@
 $size: 32px;
 $width: 70%;
+$width_of_widest_step: 66px;
 
 .progressbar-inner {
   position: relative;
@@ -41,6 +42,7 @@ $width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: $width_of_widest_step;
 
   &.active {
     .step {
