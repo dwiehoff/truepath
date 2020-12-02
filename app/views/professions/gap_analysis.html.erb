@@ -39,6 +39,7 @@ var myRadarChart = new Chart(ctx, {
       <div class="row justify-content-center">
           <h2>Your Gap Analysis for <%= @profession.track%></h2>
             <%# <p>Those are the skills you need to aquire to get on your <i><b>Truepath</b></i> as a  @profession.track</p>  %>
-            <a href="profession_path(current_user.profession)" type="button" class="btn btn-primary">Go to the <--"where?"--></a>
+            <%# <%= link_to "Career Roadmap", professions(current_user.profession), class="btn btn-primary btn-lg btn-block">%> %>
+            <%# <a href="/professions/24<" class="btn btn-primary btn-lg btn-block">Go to Roadmap</a> %>
        </div>
      </div>
