@@ -159,9 +159,11 @@ body.professions.index {
         align-items: center;
         min-height: 58px;
         cursor: pointer;
+        font-size: 1.1rem;
 
         &.compare {
           display: none;
+          i { margin-left: 5px; }
         }
         &.compare.active {
           background-color: #6F35BB;
