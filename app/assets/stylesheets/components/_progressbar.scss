@@ -1,7 +1,10 @@
-.progressbar-outer {
+$size: 32px;
+$width: 70%;
+
+.progressbar-inner {
   position: relative;
-  height: 50px;
-  width: 80%;
+  height: $size;
+  width: $width;
   margin: 0 auto;
 
   .steps {
@@ -12,30 +15,47 @@
   }
   .step {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: $size;
+    height: $size;
     background-color: #fff;
-    border: 5px solid $eggplant;
+    border: 3px solid $eggplant;
     border-radius: 50%;
     color: $eggplant;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: bold;
-
-    &.active {
-      background-color: $eggplant;
-      color: #fff;
-    }
   }
   .line {
     position: absolute;
     width: 99%;
     top: 50%;
     transform: translate(0, -50%);
-    border-top: 5px solid $eggplant;
+    border-top: 3px solid $eggplant;
     margin: 0;
     z-index: -1;
+  }
+}
+.step_label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.active {
+    .step {
+      background-color: $eggplant;
+      color: #fff;
+    }
+    .label {
+      font-weight: bolder;
+    }
+  }
+
+  &:first-of-type {
+    transform: translate(-50%, 0);
+  }
+  &:last-of-type {
+    transform: translate(50%, 0);
   }
 }
