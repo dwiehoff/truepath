@@ -1,0 +1,46 @@
+<style>
+  .outer {
+    position: relative;
+    height: 50px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .step {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #614051;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  .line {
+    position: absolute;
+    width: 99%;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 3px solid darkgray;
+    margin: 0;
+    z-index: -1;
+  }
+</style>
+
+<div class="outer">
+  <div class="steps">
+    <span class="step">1</span>
+    <span class="step">2</span>
+    <span class="step">3</span>
+  </div>
+  <hr class="line">
+</div>
