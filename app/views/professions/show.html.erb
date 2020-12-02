@@ -27,7 +27,7 @@
               <% @steps.where(order: order_number - 1).each do |step| %>
               <div class="d-flex align-items-center">
                 <Input type="checkbox" name=<%= step.name %>>
-                <h5 class="mx-2 h5-checkbox"><%= step.name %></h5>
+                <h5 class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></h5>
               </div>
               <% end %>
             </div>
@@ -51,8 +51,8 @@
               <div class="col-6 text-right">
                 <% @steps.where(order: order_number - 1).each do |step| %>
                 <div class="d-flex align-items-center">
-                   <h5 class="mx-2 h5-checkbox"><%= step.name %></h5>
-                  <Input type="checkbox" name=<%= step.name %>> 
+                   <h5 class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></h5>
+                  <Input type="checkbox" name=<%= step.name %>>
                 </div>
                 <% end %>
               </div>
