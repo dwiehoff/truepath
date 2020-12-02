@@ -13,7 +13,7 @@ class ProfessionsController < ApplicationController
         company: "ImmoScout24",
         location: "Berlin",
         skills: ['strategic thinking', 'business', 'design', 'ux'],
-        description: "We are looking for a self-driven and passionate @title to join us in bringing the Messenger for our consumers to the next level. You will be responsible for the Consumer part of the messenger and the backend service where all conversation data is handled for the different clients. The communication between our consumers, who are looking for a new home, and our real estate agents is one of the critical pieces in the ImmoScout24 ecosystem."
+        description: "We are looking for a self-driven and passionate #{@title} to join us in bringing the Messenger for our consumers to the next level. You will be responsible for the Consumer part of the messenger and the backend service where all conversation data is handled for the different clients. The communication between our consumers, who are looking for a new home, and our real estate agents is one of the critical pieces in the ImmoScout24 ecosystem."
       },
       {
         title: "Technical #{@title}",
