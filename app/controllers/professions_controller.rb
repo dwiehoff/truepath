@@ -4,9 +4,12 @@ class ProfessionsController < ApplicationController
     @professions = Profession.all # TODO: matching algorithm to only show matching professions
   end
 
+  def gap_analysis
+    @profession = Profession.find(params[:id])
+  end
+
   def jobs
     @title = params[:title]
-    @steps = params[:steps]
     @jobs = [
       {
         title: @title,
@@ -36,7 +39,6 @@ class ProfessionsController < ApplicationController
     @profession = Profession.find(params[:id])
     @steps = @profession.steps
     @max_order = Step.where(profession: @profession).order(order: :desc).first.order + 1
-
   end
 
   private
