@@ -1,3 +1,16 @@
+<style>
+  h6.card-title {
+    display: flex;
+    align-items: center;
+  }
+  .company-logo {
+    width: 20px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-shadow: 1px 1px 11px 0.15px rgba(0,0,0,0.15);
+  }
+</style>
+
 <div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false">
   <ol class="carousel-indicators">
     <!-- iterate over questions (li) -->
@@ -16,7 +29,10 @@
           <div class="card" alt="First slide">
               <div class="card-body">
                 <h5 class="card-title"><%= job[:title] %></h5>
-                <h6 class="card-title"><%= job[:company] %></h6>
+                <h6 class="card-title">
+                  <%= job[:company] == 'Zalando' ? "<img src='https://pbs.twimg.com/profile_images/1101484514277240832/6bY0Q187.png' class='company-logo'>".html_safe : "" %>
+                  <%= job[:company] %>
+                </h6>
                 <h6 class="card-title"><%= job[:location] %></h6>
                 <p class="card-text"><%= job[:description] %></p>
                 <a href="#" class="btn btn-primary btn-lg btn-block">Apply</a>
