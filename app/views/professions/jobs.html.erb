@@ -1,4 +1,34 @@
-<div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false">
+<style>
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    /*border: 1px solid black;*/
+    background-image: none;
+  }
+
+  .carousel-control-next-icon:after
+  {
+    content: '▶';
+    font-size: 15px;
+    color: #1E1248;
+  }
+
+  .carousel-control-prev-icon:after {
+    content: '◀';
+    font-size: 15px;
+    color: #1E1248;
+  }
+
+  .card-body {
+    padding: 4.25rem;
+  }
+</style>
+
+<div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false" data-ride="carousel">
   <ol class="carousel-indicators">
     <!-- iterate over questions (li) -->
     <% @jobs.each_with_index do |job, index| %>
