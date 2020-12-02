@@ -1,3 +1,69 @@
+<style>
+  .progress-bar-custom {
+    color: #1e1248;
+    /*display: flex;*/
+    width: 100%;
+    /*justify-content: center;*/
+    position: relative;
+    left: 31px;
+  }
+  .bar {
+    position: absolute;
+    background-color: #1e1248;
+    height: 3px;
+    width: 64%;
+    z-index: -1;
+    left: 30px;
+    top: -6px;
+  }
+  .progress-inner {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .order {
+    padding: 3px 8px;
+    border: 3px solid #1e1248;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: white;
+  }
+  .order.active {
+    background-color: #1e1248;
+    color: white;
+  }
+  .step.active {
+    font-weight: bold;
+  }
+  label {
+    position: relative;
+    top: 33px;
+    left: -50%;
+  }
+</style>
+
+<div class="progress-bar-custom">
+  <ul class="progress-inner">
+    <li class="progress-inner-step">
+      <span class="order">1</span>
+      <label for="step-1" class="step">Profile</label>
+    </li>
+    <li class="progress-inner-step">
+      <span class="order active">2</span>
+      <label for="step-2" class="step active">Discover</label>
+    </li>
+    <li class="progress-inner-step">
+      <span class="order">3</span>
+      <label for="step-3" class="step">Roadmap</label>
+    </li>
+    <hr class="bar">
+  </ul>
+</div>
+
   <div id="question-carousel" class="carousel slide" data-wrap="false" data-interval="false">
     <!-- iterate over questions (li) -->
     <% value = 0 %>
