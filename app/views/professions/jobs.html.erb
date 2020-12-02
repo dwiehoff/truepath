@@ -1,6 +1,7 @@
 <div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false">
   <ol class="carousel-indicators">
     <!-- iterate over questions (li) -->
+ <%= link_to '<button type="button">X</button>'.html_safe, profession_path(current_user.profession) %>
     <% @jobs.each_with_index do |job, index| %>
       <% if index == 0 %>
         <li data-target="#jobs-carousel" data-slide-to="0" class="active"></li>
