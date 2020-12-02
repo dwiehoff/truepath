@@ -123,13 +123,13 @@ puts "» #{Kasi.count} KASIs created ✅"
 
 # Create questions
 q1 = Question.create!(text: "What sounds more appealing to you?")
-q2 = Question.create!(text: "Do you rather see the Big Picture or are you more Detail Oriented?")
+q2 = Question.create!(text: "What sounds more like you: Taking charge and guiding others or having a natural penchant for technology?")
 q3 = Question.create!(text: "Are you a Creative or Analytical Thinker?")
 q4 = Question.create!(text: "Do you see yourself as a Generalist or do you aim to become a Specialist?")
 q5 = Question.create!(text: "Do you see yourself as an Entrepreneur or do you rather have an Investigative Talent?")
-q6 = Question.create!(text: "What Creative Type are you?")
-q7 = Question.create!(text: "What is more important to you: organizing things through or being quicker?")
-q8 = Question.create!(text: "Do you feel attracted by a Product-Driven Corporate Culture or do you rather value Cultural Diversity?")
+q6 = Question.create!(text: "Do you prefer working with your hands or messing with your mind?")
+q7 = Question.create!(text: "What is more important to you: structure and organization or being part of a challenging environment?")
+q8 = Question.create!(text: "Do you feel attracted by product innovation and customer-orientation or do you value a high level of diversity when it comes to your tasks?")
 q9 = Question.create!(text: "How does your mind work?")
 q10 = Question.create!(text: "Where do you recognize yourself?")
 q11 = Question.create!(text: "And finally, what matters most to you?")
