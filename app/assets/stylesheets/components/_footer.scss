@@ -1,3 +1,33 @@
+footer {
+  background-color: $eggplant;
+  text-align: center;
+  box-sizing: border-box;
+}
+footer p {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  i {
+    color: $heading-highlight;
+  }
+}
+// .image_logo {
+//   width: 60px
+// }
+
+//   a {
+//     color: white;
+//     padding: 10px;
+//     transition: color 0.3s;
+//   }
+//   a:hover {
+//     color: $heading-highlight;
+//   }
+
+
+
 
 .footer-wide {
   color: transparent;
