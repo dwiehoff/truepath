@@ -2,6 +2,10 @@ footer {
   background-color: $eggplant;
   text-align: center;
   box-sizing: border-box;
+  min-width: 300px;
+  left: 0px;
+  position: relative;
+  bottom: -20px;
 }
 footer p {
   text-align: center;
