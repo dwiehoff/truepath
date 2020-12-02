@@ -23,11 +23,16 @@
               <% @steps.where(order: order_number - 1).each do |step| %>
               <div class="d-flex align-items-center">
                 <% if step.user_completed_steps.pluck(:user_id).uniq.include?(current_user.id) %>
-                  <Input type="checkbox" name=<%= step.name %> checked ='checked'>
+                  <div class="checkbox">
+                    <input type="checkbox" name="<%= step.name.downcase.parameterize.underscore %>" id="<%= step.name.downcase.parameterize.underscore %>" checked>
+                    <label for="<%= step.name.downcase.parameterize.underscore %>"><span><p class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></p></span></label>
+                  </div>
                   <% else %>
-                  <Input type="checkbox" name=<%= step.name %>>
+                  <div class="checkbox">
+                    <input type="checkbox" name="<%= step.name.downcase.parameterize.underscore %>" id="<%= step.name.downcase.parameterize.underscore %>">
+                    <label for="<%= step.name.downcase.parameterize.underscore %>"><span><p class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></p></span></label>
+                  </div>
                 <% end %>
-                <p class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></p>
               </div>
               <% end %>
             </div>
@@ -51,11 +56,16 @@
               <div class="col-6 text-right">
                 <% @steps.where(order: order_number - 1).each do |step| %>
                 <div class="d-flex align-items-center">
-                   <p class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></p>
                   <% if step.user_completed_steps.pluck(:user_id).uniq.include?(current_user.id) %>
-                    <Input type="checkbox" name=<%= step.name %> checked ='checked'>
+                    <div class="checkbox">
+                    <input type="checkbox" name="<%= step.name.downcase.parameterize.underscore %>" id="<%= step.name.downcase.parameterize.underscore %>" checked>
+                    <label for="<%= step.name.downcase.parameterize.underscore %>"><span><p class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></p></span></label>
+                  </div>
                     <% else %>
-                    <Input type="checkbox" name=<%= step.name %>>
+                    <div class="checkbox">
+                    <input type="checkbox" name="<%= step.name.downcase.parameterize.underscore %>" id="<%= step.name.downcase.parameterize.underscore %>">
+                    <label for="<%= step.name.downcase.parameterize.underscore %>"><span><p class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></p></span></label>
+                  </div>
                   <% end %>
                 </div>
                 <% end %>
