@@ -89,7 +89,11 @@
   }
 </style>
 
-<div class="exit-btn-wrapper"><%= link_to :back do %><div class= "btn exit-btn">X</div><% end %></div>
+<div class="exit-btn-wrapper">
+  <%= link_to :back do %>
+    <div class= "btn exit-btn">X</div>
+  <% end %>
+</div>
 <h3 class= "jobs-heading">Relevant openings for <%= @jobs[0][:title] %></h3>
 <div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false" data-ride="carousel">
   <ol class="carousel-indicators">
