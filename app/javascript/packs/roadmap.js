@@ -21,6 +21,7 @@ const fill_circles = () => {
 
 const remove_filling = (order_num) => {
   document.querySelectorAll('.circle')[order_num - 1].classList.remove('active');
+  // TODO: only remove if no other checkbox filled for order
 }
 
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
