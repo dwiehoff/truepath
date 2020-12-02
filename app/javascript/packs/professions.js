@@ -5,7 +5,7 @@ const test = () => {
 
   const selectionList = document.querySelector('.selection');
 
-  selectionList.insertAdjacentHTML('beforeend', '<li class="compare selected_career pulse-btn" style="width: 70px; align-items: center; justify-content: center;"><a href="/professions/compare?q=pm,sc"><i class="fas fa-balance-scale-right"></i></a></li>');
+  selectionList.insertAdjacentHTML('beforeend', '<li class="compare selected_career pulse-btn" style="width: 200px; align-items: center; justify-content: center;"><a href="/professions/compare?q=pm,sc">Compare careers <i class="fas fa-balance-scale-right ml-8"></i></a></li>');
 
   document.querySelectorAll('.suggestion').forEach((el) => {
     el.addEventListener('mouseup', (e) => {
@@ -64,8 +64,11 @@ const test = () => {
     e.preventDefault();
     let suggestion = document.querySelector('.suggestion');
     // alert(suggestion.querySelector('h2').textContent);
-    if (document.querySelectorAll('.suggestion').length <= 1)
+    if (document.querySelectorAll('.suggestion').length <= 1) {
       compareBtn.classList.add('active');
+      keepBtn.remove();
+      ignoreBtn.remove();
+    }
     suggestion.remove();
 
         // let new_li = document.createElement('li');
@@ -83,8 +86,11 @@ const test = () => {
   ignoreBtn.addEventListener('click', (e) => {
     e.preventDefault();
     let suggestion = document.querySelector('.suggestion');
-    if (document.querySelectorAll('.suggestion').length <= 1)
+    if (document.querySelectorAll('.suggestion').length <= 1) {
       compareBtn.classList.add('active');
+      keepBtn.remove();
+      ignoreBtn.remove();
+    }
     suggestion.remove();
   });
 }
