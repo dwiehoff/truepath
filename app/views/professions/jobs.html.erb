@@ -1,4 +1,54 @@
-<div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false">
+<style>
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    /*border: 1px solid black;*/
+    background-image: none;
+  }
+
+  .carousel-control-next-icon:after
+  {
+    content: '▶';
+    font-size: 15px;
+    color: #1E1248;
+  }
+
+  .carousel-control-prev-icon:after {
+    content: '◀';
+    font-size: 15px;
+    color: #1E1248;
+  }
+
+  .card-body {
+    padding: 1rem 4.25rem;
+  }
+
+  #jobs-carousel {
+    height: 560px;
+  }
+  .card {
+    max-height: 420px;
+    overflow: scroll;
+    border: none;
+  }
+  .carousel-inner {
+    position: relative;
+  }
+  .btm-shade {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7588325652841782) 85%, rgba(255,255,255,1) 100%);
+  }
+</style>
+
+<div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false" data-ride="carousel">
 <h3 class= "jobs-heading">Relevant openings for {xyz}</h3>
   <ol class="carousel-indicators">
     <!-- iterate over questions (li) -->
@@ -20,11 +70,17 @@
                 <h6 class="card-title"><%= job[:company] %></h6>
                 <h6 class="card-title"><%= job[:location] %></h6>
                 <p class="card-text"><%= job[:description] %></p>
+                <br>
                 <a href="#" class="btn btn-primary btn-lg btn-block">Apply</a>
+                <br>
+                <br>
+                <br>
+                <br>
               </div>
           </div>
         </div>
     <% end %>
+    <div class="btm-shade"></div>
   </div>
   <a class="carousel-control-prev" href="#jobs-carousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
