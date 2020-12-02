@@ -132,7 +132,7 @@ q7 = Question.create!(text: "Are you thinking/planning things through or rather 
 q8 = Question.create!(text: "Do you like working on one main task/product at a time or do you want to experience diversity in your worklife?")
 q9 = Question.create!(text: "Please indicate your <strong>preference</strong>?")
 q10 = Question.create!(text: "What sounds more interesting to you?")
-q11 = Question.create!(text: "And finally, which of the following drivers is more important to you ?")
+q11 = Question.create!(text: "And finally, which of the following is more important to you?")
 
 puts "» #{Question.count} questions created ✅"
 
