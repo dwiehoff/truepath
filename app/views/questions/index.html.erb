@@ -1,22 +1,22 @@
 <style>
-  .progress-bar-custom {
+  .progress-bar-outer {
     color: #1e1248;
     /*display: flex;*/
     width: 100%;
     /*justify-content: center;*/
     position: relative;
-    left: 31px;
+    left: 6%;
   }
   .bar {
     position: absolute;
     background-color: #1e1248;
     height: 3px;
-    width: 64%;
+    width: 64.5%;
     z-index: -1;
-    left: 30px;
-    top: -6px;
+    left: 12%;
+    top: -18%;
   }
-  .progress-inner {
+  .progress-bar-inner {
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -46,8 +46,8 @@
   }
 </style>
 
-<div class="progress-bar-custom">
-  <ul class="progress-inner">
+<div class="progress-bar-outer">
+  <ul class="progress-bar-inner">
     <li class="progress-inner-step">
       <span class="order">1</span>
       <label for="step-1" class="step">Profile</label>
@@ -60,8 +60,8 @@
       <span class="order">3</span>
       <label for="step-3" class="step">Roadmap</label>
     </li>
-    <hr class="bar">
   </ul>
+  <hr class="bar">
 </div>
 
   <div id="question-carousel" class="carousel slide" data-wrap="false" data-interval="false">
