@@ -222,5 +222,4 @@ UserCompletedStep.create!(user: louis, step: ba)
 UserCompletedStep.create!(user: louis, step: atc)
 UserCompletedStep.create!(user: louis, step: cservice)
 
-puts "» Had user #{louis.name} complete #{UserCompletedStep.where(user: louis).count} steps  ✅"
-
+puts "» Had user #{louis.name} complete #{UserCompletedStep.where(user: louis).count} steps  ✅"

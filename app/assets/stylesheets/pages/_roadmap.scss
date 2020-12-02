@@ -2,8 +2,20 @@
   $roadmap-bg: rgba(0,0,0,0.01);
   $roadmap-color: $eggplant;
   // $roadmap-color: #007bff;
-  $roadmap-font-stack: 'Lato', sans-serif;
+  $roadmap-font-stack: 'Lato', 'Helvetica', sans-serif;
 
+h1 {
+  font-weight: bolder;
+  color: #1E1248;
+  margin-top: 11vh;
+}
+
+p {
+  font-family: "Playfair Display", sans-serif;
+  color: #C3C4C7;
+  font-size: 21px;
+  font-style: italic;
+}
 .roadmap {
 
   font: 100% $roadmap-font-stack;
@@ -32,6 +44,13 @@
 
 .roadmap .how-it-works.row {
   display: flex;
+
+  p {
+  font-weight: bolder;
+  color: #C3C4C7;
+  font-size: 17px;
+  }
+
   .col-2 {
       display: inline-flex;
       align-self: stretch;
