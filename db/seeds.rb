@@ -123,16 +123,16 @@ puts "» #{Kasi.count} KASIs created ✅"
 
 # Create questions
 q1 = Question.create!(text: "What sounds more appealing to you?")
-q2 = Question.create!(text: "What sounds more appealing to you?")
-q3 = Question.create!(text: "Do you prefer to work in a creative or in a more analytical way?")
-q4 = Question.create!(text: "Do you prefer specialisation in a certain area or to be more of a generalist?")
-q5 = Question.create!(text: "Are you more of an entrepreneur or do you like to investigate?")
-q6 = Question.create!(text: "What sounds more appealing to you?")
-q7 = Question.create!(text: "Are you thinking/planning things through or rather deal with problems when they come up?")
-q8 = Question.create!(text: "Do you like working on one main task/product at a time or do you want to experience diversity in your worklife?")
-q9 = Question.create!(text: "Please indicate your <strong>preference</strong>?")
-q10 = Question.create!(text: "What sounds more interesting to you?")
-q11 = Question.create!(text: "And finally, which of the following is more important to you?")
+q2 = Question.create!(text: "What sounds more like you: Taking charge and guiding others or having a natural penchant for technology?")
+q3 = Question.create!(text: "Are you a Creative or Analytical Thinker?")
+q4 = Question.create!(text: "Do you see yourself as a Generalist or do you aim to become a Specialist?")
+q5 = Question.create!(text: "Do you see yourself as an Entrepreneur or do you rather have an Investigative Talent?")
+q6 = Question.create!(text: "Do you prefer working with your hands or messing with your mind?")
+q7 = Question.create!(text: "What is more important to you: structure and organization or being part of a challenging environment?")
+q8 = Question.create!(text: "Do you feel attracted by product innovation and customer-orientation or do you value a high level of diversity when it comes to your tasks?")
+q9 = Question.create!(text: "How does your mind work?")
+q10 = Question.create!(text: "Where do you recognize yourself?")
+q11 = Question.create!(text: "And finally, what matters most to you?")
 
 puts "» #{Question.count} questions created ✅"
 
