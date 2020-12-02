@@ -168,9 +168,9 @@ puts "» #{Answer.count} answers created ✅"
 # Create steps
 coder = Step.create!(name: "Coding proficiency", order: 0, profession: se, resource_url: 'https://www.lewagon.com')
 coder2 = Step.create!(name: "Coding proficiency", order: 0, profession: pm, resource_url: 'https://www.lewagon.com')
-Step.create!(name: "Analytical thinking capability", order: 0, profession: pm)
+atc = Step.create!(name: "Analytical thinking capability", order: 0, profession: pm)
 Step.create!(name: "Certification", order: 0, profession: pm)
-Step.create!(name: "Customer service", order: 1, profession: pm)
+cservice = Step.create!(name: "Customer service", order: 1, profession: pm)
 Step.create!(name: "Business development manager", order: 1, profession: pm)
 Step.create!(name: "Program manager", order: 1, profession: pm)
 Step.create!(name: "Marketing manager", order: 1, profession: pm)
@@ -215,4 +215,11 @@ UserCompletedStep.create!(user: daniel, step: ba)
 puts "» Had user #{daniel.name} complete #{UserCompletedStep.where(user: daniel).count} steps  ✅"
 
 
+UserCompletedStep.create!(user: louis, step: coder)
+UserCompletedStep.create!(user: louis, step: coder2)
+UserCompletedStep.create!(user: louis, step: coder3)
+UserCompletedStep.create!(user: louis, step: ba)
+UserCompletedStep.create!(user: louis, step: atc)
+UserCompletedStep.create!(user: louis, step: cservice)
 
+puts "» Had user #{louis.name} complete #{UserCompletedStep.where(user: louis).count} steps  ✅"

@@ -7,9 +7,9 @@
 
   <div class="container">
     <div class="row justify-content-center">
-        <h2>Your Roadmap for <%=@profession.track%></h2>
-          <p>This is your <i><b>Truepath</b></i> for the <%= @profession.track %> track</p>
-        <a href="/professions/Product%20Management%20Intern/jobs" type="button" class="btn btn-primary">Find a Matching Job</a>
+        <h1>Your<i><b> Truepath </b></i> for <%=@profession.track%></h1>
+          <p>This is your Roadmap for the <%= @profession.track %> track. Check it out, see for yourself at which step you currently stand and find the corresponding current openings on the job market.</p>
+        <a href="/professions/Product%20Management%20Intern/jobs" type="button" class="btn btn-primary">Relevant Current Openings</a>
     </div>
   </div>
 
@@ -26,8 +26,12 @@
             <div class="col-9 offset-1">
               <% @steps.where(order: order_number - 1).each do |step| %>
               <div class="d-flex align-items-center">
-                <Input type="checkbox" name=<%= step.name %>>
-                <h5 class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></h5>
+                <% if step.user_completed_steps.pluck(:user_id).uniq.include?(current_user.id) %>
+                  <Input type="checkbox" name=<%= step.name %> checked ='checked'>
+                  <% else %>
+                  <Input type="checkbox" name=<%= step.name %>>
+                <% end %>
+                <p class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></p>
               </div>
               <% end %>
             </div>
@@ -51,8 +55,12 @@
               <div class="col-6 text-right">
                 <% @steps.where(order: order_number - 1).each do |step| %>
                 <div class="d-flex align-items-center">
-                   <h5 class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></h5>
-                  <Input type="checkbox" name=<%= step.name %>>
+                   <p class="mx-2 h5-checkbox"><%= link_to step.name, profession_step_jobs_path(step.name) %></p>
+                  <% if step.user_completed_steps.pluck(:user_id).uniq.include?(current_user.id) %>
+                    <Input type="checkbox" name=<%= step.name %> checked ='checked'>
+                    <% else %>
+                    <Input type="checkbox" name=<%= step.name %>>
+                  <% end %>
                 </div>
                 <% end %>
               </div>
