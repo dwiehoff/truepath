@@ -21,11 +21,11 @@ pm = Profession.create!(track: 'Product Management', short_description: 'CEO of 
 # pm.image.attach(io: file, filename: "img_p#{pm.id}", content_type: 'image/jpeg')
 
 file = URI.open('https://images.unsplash.com/photo-1554774853-719586f82d77?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
-sc = Profession.create!(track: 'Strategy Consultant', short_description: 'Advising execs on high-level decisions in an unbiased fashion, using deep industry knowledge for optimal results.')
+sc = Profession.create!(track: 'Strategy Consulting', short_description: 'Advising execs on high-level decisions in an unbiased fashion, using deep industry knowledge for optimal results.')
 # sc.image.attach(io: file, filename: "img_p#{sc.id}", content_type: 'image/jpeg')
 
 file = URI.open('https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')
-se = Profession.create!(track: 'Software Engineer', short_description: 'Research, design, and develop computer and network software.')
+se = Profession.create!(track: 'Software Engineering', short_description: 'Research, design, and develop computer and network software.')
 # se.image.attach(io: file, filename: "img_p#{se.id}", content_type: 'image/jpeg')
 
 puts "» #{Profession.count} professions created ✅"
