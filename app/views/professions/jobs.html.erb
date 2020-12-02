@@ -1,8 +1,10 @@
+<div class= "exit">
+ <%= link_to 'X', :back %>
+ </div>
 <div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false">
-<h3 class= "jobs-heading">Relevant openings for {xyz}</h3>
+<h3 class= "jobs-heading">Relevant openings for <%= @jobs[0][:title] %></</h3>
   <ol class="carousel-indicators">
     <!-- iterate over questions (li) -->
- <%= link_to '<button type="button">X</button>'.html_safe, profession_path(current_user.profession) %>
     <% @jobs.each_with_index do |job, index| %>
       <% if index == 0 %>
         <li data-target="#jobs-carousel" data-slide-to="0" class="active"></li>
