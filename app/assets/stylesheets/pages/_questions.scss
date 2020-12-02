@@ -16,6 +16,15 @@
   z-index: 0;
 }
 
+.carousel-indicators{
+  max-width: 345px;
+}
+.carousel-indicators li {
+  background-color: #1E1248;
+}
+.carousel-indicators .active {
+  background-color: #1E1248;
+}
 
 #question-carousel {
   display: flex;
