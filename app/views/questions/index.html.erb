@@ -19,7 +19,7 @@
           <% end %>
           <div class="card" alt="First slide">
             <div class="card-body">
-              <h5 class="card-title text-center">Question <%= index + 1 %></h5>
+              <h5 class="card-title text-center"><%= index + 1 %> / <%= @questions.count %></h5>
               <p class="card-text text-center"><%=question.text.html_safe%></p>
               <div class=" d-flex justify-content-center ">
 
