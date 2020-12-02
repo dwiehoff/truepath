@@ -14,7 +14,6 @@
     /*border-radius: 50%;*/
     /*box-shadow: 1px 1px 11px 0.15px rgba(0,0,0,0.15);*/
   }
-
   .job-tags {
     margin-top: 17px;
     display: flex;
@@ -35,7 +34,6 @@
     padding: 3px 6px;
     border-radius: 3px;
   }
-
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     height: 100px;
@@ -84,10 +82,14 @@
     background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7588325652841782) 85%, rgba(255,255,255,1) 100%);
   }
 </style>
-  
+
+<div class= "btn exit-btn">
+  <%= link_to 'X', :back %>
+</div>
+
 <div class= "btn exit-btn"><%= link_to 'X', :back %></div>
-<div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false" data-ride="carousel">
 <h3 class= "jobs-heading">Relevant openings for <%= @jobs[0][:title] %></h3>
+<div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false" data-ride="carousel">
   <ol class="carousel-indicators">
     <!-- iterate over questions (li) -->
     <% @jobs.each_with_index do |job, index| %>
