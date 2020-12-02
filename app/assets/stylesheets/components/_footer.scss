@@ -3,6 +3,12 @@
   background-color: $eggplant;
   font-family: "Open Sans",sans-serif;
   text-align: center;
+  box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding: 24px 20px;
+    min-width: 300px;
+    max-height: 110px;
 }
 
 p {
