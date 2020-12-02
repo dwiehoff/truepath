@@ -1,4 +1,41 @@
 <style>
+  h6.card-title {
+    display: flex;
+    align-items: center;
+  }
+  .location-logo {
+    margin-right: 10px;
+    width: 20px;
+  }
+  .company-logo {
+    width: 20px;
+    margin-right: 10px;
+    /*border: 1px solid transparent;*/
+    /*border-radius: 50%;*/
+    /*box-shadow: 1px 1px 11px 0.15px rgba(0,0,0,0.15);*/
+  }
+
+  .job-tags {
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 100%;
+    padding-left: 0;
+  }
+  .job-tags li {
+    padding-left: 0;
+    background-color: #1E1248;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    font-size: 0.7em;
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 3px;
+  }
+
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     height: 100px;
@@ -68,8 +105,25 @@
           <div class="card" alt="First slide">
               <div class="card-body">
                 <h5 class="card-title"><%= job[:title] %></h5>
-                <h6 class="card-title"><%= job[:company] %></h6>
-                <h6 class="card-title"><%= job[:location] %></h6>
+                <h6 class="card-title"><%= image_tag("berlin.svg", class: 'location-logo') if job[:location] == 'Berlin' %><%= job[:location] %></h6>
+                <h6 class="card-title">
+                  <%= job[:company] == 'Zalando' ? "<img src='https://pbs.twimg.com/profile_images/1101484514277240832/6bY0Q187.png' class='company-logo'>".html_safe : "" %>
+                  <%= job[:company] == 'ImmoScout24' ? "<img src='https://www.scout24.com/media/scout24/user_upload/ImmoScout24_Logo_w3000px.png' class='company-logo'>".html_safe : "" %>
+                  <%= job[:company] == 'interact.io' ? "<img src='https://www.interact.io/wp-content/uploads/2018/06/interact_logo-300x69.png' class='company-logo'>".html_safe : "" %>
+                  <%= job[:company] %>
+                </h6>
+                <ul class="job-tags">
+                  <% if job[:company] == 'Zalando' %>
+                    <li>Remote</li>
+                    <li>Above-average salary</li>
+                  <% elsif job[:company] == 'ImmoScout24' %>
+                    <li>Flexible Hours</li>
+                    <li>Central Location</li>
+                  <% else %>
+                    <li>Top Employer</li>
+                    <li>Mobile Application</li>
+                  <% end %>
+                </ul>
                 <p class="card-text"><%= job[:description] %></p>
                 <br>
                 <a href="#" class="btn btn-primary btn-lg btn-block">Apply</a>
