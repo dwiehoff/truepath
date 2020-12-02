@@ -53,6 +53,11 @@
     height: 100%;
     left: calc(50% - 3px);
   }
+ .col-2.full_left:after {
+    height: 100%;
+    left: calc(50%);
+  }
+
 
   .col-2.top:after {
     height: 50%;
