@@ -126,13 +126,13 @@ q1 = Question.create!(text: "What sounds more appealing to you?")
 q2 = Question.create!(text: "What sounds more appealing to you?")
 q3 = Question.create!(text: "Do you prefer to work in a creative or in a more analytical way?")
 q4 = Question.create!(text: "Do you prefer specialisation in a certain area or to be more of a generalist?")
-q5 = Question.create!(text: "Would you call yourself an entrepreneurial or more of an investigative thinker?")
+q5 = Question.create!(text: "Are you more of an entrepreneur or do you like to investigate?")
 q6 = Question.create!(text: "What sounds more appealing to you?")
 q7 = Question.create!(text: "Are you thinking/planning things through or rather deal with problems when they come up?")
 q8 = Question.create!(text: "Do you like working on one main task/product at a time or do you want to experience diversity in your worklife?")
 q9 = Question.create!(text: "Please indicate your <strong>preference</strong>?")
 q10 = Question.create!(text: "What sounds more interesting to you?")
-q11 = Question.create!(text: "And finally, which of the following drivers is more important to you ?")
+q11 = Question.create!(text: "And finally, which of the following is more important to you?")
 
 puts "» #{Question.count} questions created ✅"
 
