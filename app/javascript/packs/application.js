@@ -43,3 +43,12 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector('.professions.show'))
     fill_circles();
 });
+
+const scrollButton = document.querySelector('#scroll-button');
+if (scrollButton) {
+  scrollButton.addEventListener('click',(event) => {
+    document.querySelector('.circle.roadmap-order-3').scrollIntoView(true);
+  });
+}
+
+
