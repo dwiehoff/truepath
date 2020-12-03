@@ -90,7 +90,14 @@
 </style>
 
 <div class="exit-btn-wrapper"><%= link_to :back do %><div class= "btn exit-btn">X</div><% end %></div>
-<h3 class= "jobs-heading">Relevant openings for <%= @jobs[0][:title] %></h3>
+
+  <div class="container">
+    <div class="row justify-content-center">
+        <h1><i><b>Your True </b></i> Current Openings as a <%= @jobs[0][:title] %></h1>
+        <p>This selection reflects the most current openings for <%= @jobs[0][:title] %> and match your current step on your <b>Truepath</b>. See for yourself and apply where you see best fit.</p>
+    </div>
+  </div>
+
 <div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false" data-ride="carousel">
   <ol class="carousel-indicators">
     <!-- iterate over questions (li) -->
@@ -119,7 +126,7 @@
                 <ul class="job-tags">
                   <% if job[:company] == 'Zalando' %>
                     <li>Remote</li>
-                    <li>Above-average salary</li>
+                    <li>Above-Average Salary</li>
                   <% elsif job[:company] == 'ImmoScout24' %>
                     <li>Flexible Hours</li>
                     <li>Central Location</li>
