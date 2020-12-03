@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <h1>Your<i><b> Truepath </b></i> for <%=@profession.track%></h1>
         <p>This is your roadmap for the <%= @profession.track %> track. Check it out, see for yourself at which step you currently stand and find the corresponding current openings on the job market.</p>
-        <a href="/professions/Product%20Management%20Intern/jobs" class="btn btn-primary btn-block btn-lg">Find your next job</a>
+        <div id="scroll-button" class="btn btn-primary btn-block btn-lg">Find your next job</div>
     </div>
   </div>
 
@@ -17,7 +17,7 @@
 <!-- first section -->
           <div class="row align-items-center how-it-works">
             <div class="col-2 text-center full_left">
-              <div class="circle"><span><%= order_number %></span></div>
+              <div class="circle roadmap-order-<%= order_number %>"><span><%= order_number %></span></div>
             </div>
             <div class="col-9 offset-1">
               <% @steps.where(order: order_number - 1).each do |step| %>
@@ -61,7 +61,7 @@
                 <% end %>
               </div>
               <div class="col-2 text-center full">
-                <div class="circle"><span><%= order_number %></span></div>
+                <div class="circle roadmap-order-<%= order_number %>"><span><%= order_number %></span></div>
               </div>
             </div>
     <!-- path in between -->
