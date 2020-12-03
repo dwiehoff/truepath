@@ -31,7 +31,7 @@ require("jquery-ui");
 // import { initSelect2 } from '../components/init_select2';
 import { test } from '../packs/professions'
 import { algorithm } from '../packs/questions'
-import { fill_circles } from '../packs/roadmap'
+import { fill_circles, setup_checkboxes } from '../packs/roadmap'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -40,6 +40,8 @@ document.addEventListener('turbolinks:load', () => {
     test();
   if (document.querySelector('.questions.index'))
     algorithm();
-  if (document.querySelector('.professions.show'))
+  if (document.querySelector('.professions.show')) {
     fill_circles();
+    setup_checkboxes();
+  }
 });

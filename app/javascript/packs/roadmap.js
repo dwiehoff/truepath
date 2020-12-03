@@ -19,24 +19,29 @@ const fill_circles = () => {
 
 };
 
-const remove_filling = (order_num) => {
-  document.querySelectorAll('.circle')[order_num - 1].classList.remove('active');
-  // TODO: only remove if no other checkbox filled for order
-}
+const setup_checkboxes = () => {
 
-const checkboxes = document.querySelectorAll('input[type=checkbox]');
-
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener('change', (e) => {
-    if (e.target.checked) {
-      // console.log('checked');
-      fill_circles();
-    } else {
-      // console.log('unchecked');
-      // should also remove class active (not for demo)
-      remove_filling(e.target.dataset.order);
+    const remove_filling = (order_num) => {
+      document.querySelectorAll('.circle')[order_num - 1].classList.remove('active');
+      // TODO: only remove if no other checkbox filled for order
     }
-  });
-});
 
-export { fill_circles };
+    const checkboxes = document.querySelectorAll('input[type=checkbox]');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          // console.log('checked');
+          fill_circles();
+          // send_to_db(e.target.dataset.order, e.target.name);
+        } else {
+          // console.log('unchecked');
+          // should also remove class active (not for demo)
+          remove_filling(e.target.dataset.order);
+        }
+      });
+    });
+
+};
+
+export { fill_circles, setup_checkboxes };
