@@ -1,12 +1,15 @@
-<h3>Which one do you prefer?</h3>
+<h3>Is one of these your<i><b> Truepaths</b></i>?</h3>
+
+
 <div class="wrapper">
     <div class="first">
-      <a href="/professions/<%= Profession.where(track: 'Product Management').ids[0] %>" class="btn btn-info btn-lg btn-block">Product Manager</a>
+      <a href="/professions/<%= Profession.where(track: 'Product Management').ids[0] %>" class="btn btn-primary btn-lg btn-block">Product Manager</a>
       <div id="D">
-      <h5>Connection between Product Development and Marketing</h5>
+      <h6>Connection between Product Development and Marketing</h6>
       </div>
+
       <div id="K">
-      <h4>Knowledge</h4>
+      <h7>Knowledge</h7>
       <ul>
       <li>Bachelor Degree or Certificate</li>
       <li>Product Management Techniques</li>
@@ -14,46 +17,73 @@
       </ul>
       </div>
 
+      <div id="Pr">
+      <h7>Pros</h7>
+      <ul>
+      <li>Extremly diversified tasks </li>
+      <li>Works cross-departmental</li>
+      <li>Has creative freedom</li>
+      </ul>
+      </div>
+
       <div id="P">
-      <h4>Personality</h4>
+      <h7>Personality</h7>
       <ul>
       <li>Entrepreneurial</li>
       <li>Analytical thinking</li>
       <li>Goal and Product Oriented</li>
       </ul>
     </div>
+
     <div id="S">
-      <h4>Salary</h4>
-      <p>$80.000-$120.000</p>
+      <h7>Salary</h7>
+      <ul>
+        <li>$80.000-$120.000</li>
+      </ul>
       </div>
+
       <a href="/professions/<%= Profession.where(track: 'Product Management').ids[0] %>" class="btn btn-primary btn-lg btn-block">Continue</a>
     </div>
     <div class="second">
-      <a href="#" class="btn btn-info btn-lg btn-block">Software Engineer</a>
+      <a href="#" class="btn btn-primary btn-lg btn-block">Software Engineer</a>
       <div id="D">
-      <h5>Combining Business Sense with Programming Know-How</h5>
+      <h6>Combining Business Sense with Programming Know-How</h6>
       </div>
+
       <div id="K">
-      <h4>Knowledge</h4>
+      <h7>Knowledge</h7>
       <ul>
       <li>Bachelor Degree or Certificate</li>
       <li>"Hands-on" Experience</li>
       <li>General IT and Mathematics Knowledge</li>
       </ul>
       </div>
+
+      <div id="Pr">
+      <h7>Pros</h7>
+      <ul>
+      <li>Extremly diversified tasks </li>
+      <li>Works cross-departmental</li>
+      <li>Has creative freedom</li>
+      </ul>
+      </div>
+
       <div id="P">
-      <h4>Personality</h4>
+      <h7>Personality</h7>
       <ul>
       <li>Outgoing Personality</li>
       <li>Eager to learn</li>
       <li>Great affinity for Task & Self Management</li>
       </ul>
       </div>
-      <div id="S">
 
-      <h4>Salary</h4>
-      <p>$60.000-$90.000</p>
+      <div id="S">
+      <h7>Salary</h7>
+      <ul>
+        <li>$60.000-$90.000</li>
+      </ul>
       </div>
+
       <a href="/professions/<%= Profession.where(track: 'Software Engineer').ids[0] %>" class="btn btn-primary btn-lg btn-block">Continue</a>
     </div>
 </div>
