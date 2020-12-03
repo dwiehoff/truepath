@@ -1,9 +1,19 @@
 <% content_for :meta_title, 'Matching Openings' %>
 
 <style>
+
+  .rapper {
+    display: flex;
+  }
+
   h6.card-title {
     display: flex;
     align-items: center;
+  }
+  .job-description {
+    font-family: Lato, Helvetica, sans-serif;
+    color: #1E1248;
+    font-size: 16px;
   }
   .location-logo {
     margin-right: 10px;
@@ -87,22 +97,26 @@
     margin-top: 0 !important;
   }
   .container.mt-3 {
-    margin-top: 60px !important;
+    margin-top: 0px !important;
   }
 </style>
 
-<div class="exit-btn-wrapper">
-  <%= link_to :back do %>
-    <div class= "btn exit-btn">X</div>
-  <% end %>
-</div>
-
+<div class="rapper">
   <div class="container">
     <div class="row justify-content-center">
-        <h1><i><b>Your True </b></i> Current Openings as a <%= @jobs[0][:title] %></h1>
-        <p>This selection reflects the most current openings for <%= @jobs[0][:title] %> and match your current step on your <b>Truepath</b>. See for yourself and apply where you see best fit.</p>
+        <h1><i><b>Your True </b></i> Next Job?</h1>
+
     </div>
   </div>
+  <div class="exit-btn-wrapper">
+    <%= link_to :back do %>
+      <div class= "btn exit-btn">X</div>
+    <% end %>
+  </div>
+
+</div>
+<p>This selection reflects the most current openings for <%= @jobs[0][:title] %> and matches your current step on your <b>Truepath</b>.</p>
+
 
 <div id="jobs-carousel" class="carousel slide" data-wrap="false" data-interval="false" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -141,7 +155,7 @@
                     <li>Mobile Application</li>
                   <% end %>
                 </ul>
-                <p class="card-text"><%= job[:description] %></p>
+                <p class="card-text job-description"><%= job[:description] %></p>
                 <br>
                 <a href="#" class="btn btn-primary btn-lg btn-block">Apply</a>
                 <br>

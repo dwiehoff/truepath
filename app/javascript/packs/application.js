@@ -45,3 +45,12 @@ document.addEventListener('turbolinks:load', () => {
     setup_checkboxes();
   }
 });
+
+const scrollButton = document.querySelector('#scroll-button');
+if (scrollButton) {
+  scrollButton.addEventListener('click',(event) => {
+    document.querySelector('.circle.roadmap-order-3').scrollIntoView(true);
+  });
+}
+
+
