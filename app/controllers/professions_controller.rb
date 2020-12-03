@@ -23,11 +23,11 @@ class ProfessionsController < ApplicationController
         description: "As Technical #{@title} in Zalando Marketing Services, you will shape the future of Europe's biggest fashion ad platform. You will own the data and machine learning infrastructure which is a key component in driving marketing value to Zalando brands. You will interact with Zalando merchants and brands as well as Zalando customers and influencers to develop a deep understanding of the relationships among customers, fashion products and fashion brands. You will work with Zalando engineers and applied scientists to build the data infrastructure and machine learning models necessary to capture these relationships and provide them to ad platform components as a means of driving efficiencies into the ZMS ad marketplace."
       },
       {
-        title: "#{@title} / product owner",
+        title: "Junior #{@title}",
         company: "interact.io",
         location: "Berlin",
         skills: ['strategic thinking', 'certification', 'ux'],
-        description: "We are seeking an ambitious, self-motivated technical #{@title} to help us design, develop and launch the next set of industry leading Enterprise Cloud Solutions and successfully deliver reference implementations of our software with key clients worldwide. Applicants should enjoy working in a fast paced and customer-oriented environment in a highly collaborative international team."
+        description: "We are seeking an ambitious, self-motivated junior #{@title} to help us design, develop and launch the next set of industry leading Enterprise Cloud Solutions and successfully deliver reference implementations of our software with key clients worldwide. Applicants should enjoy working in a fast paced and customer-oriented environment in a highly collaborative international team."
       }
     ]
   end
