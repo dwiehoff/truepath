@@ -1,0 +1,5 @@
+meta_product_name: "TruePath"
+meta_title: "TruePath - Making every step count"
+meta_description: "Once we graduate, we find ourselves with a multitude of opportunities heading our way. If you are not quite sure yet where to take your professional life, TruePath's AI will steer you into the right direction."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
