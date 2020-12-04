@@ -20,8 +20,13 @@
 
   .second {
       border: 4px solid #777777;
-      width: auto;
       border-left: 2px solid #777777;
+  }
+
+  .first, .second {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
 
   #K,#P {
@@ -47,6 +52,7 @@
 
   #D h6 {
     color: #1E1248;
+    font-size: 0.95em;
   }
   #S {
     padding-left: 12px;
