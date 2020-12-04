@@ -1,4 +1,8 @@
 body.questions.index {
+  .carousel-item .card {
+    height: 80vh;
+  }
+
   h5.card-title {
       background-color: $eggplant;
       width: 54px;
@@ -34,6 +38,10 @@ body.questions.index {
 
   .carousel-indicators{
     max-width: 345px;
+    position: absolute;
+    bottom: 20px !important;
+    margin: 0 auto;
+    height: 50px;
   }
   .carousel-indicators li {
     background-color: #1E1248;
