@@ -136,11 +136,14 @@ body.professions.index {
       }
 
       .compare.active {
-        background-color: #6F35BB;
+        background-color: $eggplant; // #6F35BB;
         display: flex;
       }
       .compare.active:hover a {
-        color: $eggplant;
+        // color: $eggplant;
+      }
+      .compare.active:hover {
+        // background-color: $eggplant;
       }
       a.selected_career {
         text-decoration: none;
