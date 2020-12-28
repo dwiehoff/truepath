@@ -1,11 +1,45 @@
-<h1>Pages#Gap_analysis</h1>
+<h1>Pages#gap_analysis</h1>
 <p>Find me in app/views/professions/id</p> 
+
+<canvas id="myRadarChart" width="75%" height=75%></canvas>
+<script>
+var ctx = document.getElementById('myRadarChart');
+var myRadarChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+    labels: ['Coding Proficiency', 'Analytical thinking', 'Leadership', 'Business Knowhow', 'Personality', 'Experience'],
+    datasets: [{
+      label: 'Your Skills',
+      data: [18, 19, 12, 17, 8, 3],
+      backgroundColor: ['rgba(0, 255, 0, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+      borderWidth: 1},
+      {
+      label: 'Skills required',
+      data: [17, 20, 20, 1, 8, 16],
+      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+      borderWidth: 1
+    }]
+    },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+</script>
+
   <title>Gap Analysis</title>
     <div class="container"> 
       <div class="row justify-content-center">
-         <%= image_tag "Spider-chart.jpg", class: "rounded mx-auto d-block", alt: "Gap Analysis" %>
-          <h2>Your Gap Analysis for <%=@profession.track</h2>
-            <%# <p>Those are the skills you need to aquire to get on your <i><b>Truepath</b></i> as a <%= @profession.track</p> %>
-          <%# <a href="#" type="button" class="btn btn-primary">Go to the <--"where?"--></a> %>
+          <h2>Your Gap Analysis for <%= @profession.track%></h2>
+            <%# <p>Those are the skills you need to aquire to get on your <i><b>Truepath</b></i> as a  @profession.track</p>  %>
+            <%# <%= link_to "Career Roadmap", professions(current_user.profession), class="btn btn-primary btn-lg btn-block">%> %>
+            <%# <a href="/professions/24<" class="btn btn-primary btn-lg btn-block">Go to Roadmap</a> %>
        </div>
      </div>

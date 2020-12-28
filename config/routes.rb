@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'welcome', to: 'pages#welcome'
+  get 'professions/:id/gap_analysis', to: 'professions#gap_analysis'
   get 'onboarding', to: 'questions#index'
   get 'answers/:id', to: 'answers#answer'
   get 'professions/compare', to: 'professions#compare'
